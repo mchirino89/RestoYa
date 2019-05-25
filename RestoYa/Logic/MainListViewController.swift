@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainListViewController.swift
 //  RestoYa
 //
 //  Created by Mauricio Chirino on 25/05/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
