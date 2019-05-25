@@ -77,12 +77,9 @@
 		71C8540D2299C93C00D2E0DB /* RestoYa */ = {
 			isa = PBXGroup;
 			children = (
-				71C8540E2299C93C00D2E0DB /* AppDelegate.swift */,
-				71C854102299C93C00D2E0DB /* ViewController.swift */,
-				71C854122299C93C00D2E0DB /* Main.storyboard */,
-				71C854152299C93E00D2E0DB /* Assets.xcassets */,
-				71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */,
-				71C8541A2299C93E00D2E0DB /* Info.plist */,
+				71C854302299CDD400D2E0DB /* Logic */,
+				71C8542F2299CDC900D2E0DB /* Support */,
+				71C8542E2299CDB600D2E0DB /* UI */,
 			);
 			path = RestoYa;
 			sourceTree = "<group>";
@@ -94,6 +91,33 @@
 				71C854252299C93E00D2E0DB /* Info.plist */,
 			);
 			path = RestoYaTests;
+			sourceTree = "<group>";
+		};
+		71C8542E2299CDB600D2E0DB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				71C854152299C93E00D2E0DB /* Assets.xcassets */,
+				71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */,
+				71C854122299C93C00D2E0DB /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		71C8542F2299CDC900D2E0DB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				71C8540E2299C93C00D2E0DB /* AppDelegate.swift */,
+				71C8541A2299C93E00D2E0DB /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		71C854302299CDD400D2E0DB /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				71C854102299C93C00D2E0DB /* ViewController.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7CXK2PKWD;
-				INFOPLIST_FILE = RestoYa/Info.plist;
+				INFOPLIST_FILE = RestoYa/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7CXK2PKWD;
-				INFOPLIST_FILE = RestoYa/Info.plist;
+				INFOPLIST_FILE = RestoYa/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
