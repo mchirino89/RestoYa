@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,13 @@
 		71C854242299C93E00D2E0DB /* RestoYaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C854232299C93E00D2E0DB /* RestoYaTests.swift */; };
 		71C854322299D17000D2E0DB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854312299D17000D2E0DB /* Keys.plist */; };
 		71C854362299E61700D2E0DB /* Request.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854352299E61700D2E0DB /* Request.plist */; };
+		71C85438229A1CA000D2E0DB /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */; };
+		71C8543A229A1E9600D2E0DB /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85439229A1E9600D2E0DB /* MapHandler.swift */; };
+		71C8543C229A1EF500D2E0DB /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */; };
+		71C8543F229A21E300D2E0DB /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8543E229A21E300D2E0DB /* Restaurant.swift */; };
+		71C85446229A249500D2E0DB /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85445229A249500D2E0DB /* NetworkProvider.swift */; };
+		71C85449229A252800D2E0DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85448229A252800D2E0DB /* Config.swift */; };
+		E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043A97AF8339BD78C0D68971 /* Pods-RestoYa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoYa.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa.release.xcconfig"; sourceTree = "<group>"; };
+		1EDA259B3AA14BADE2002A60 /* Pods-RestoYa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoYa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa.debug.xcconfig"; sourceTree = "<group>"; };
+		25248F0CB7590FE4F8BC2CDF /* Pods_RestoYaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoYaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoYa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C8540B2299C93C00D2E0DB /* RestoYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestoYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C8540E2299C93C00D2E0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C854102299C93C00D2E0DB /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +51,12 @@
 		71C854252299C93E00D2E0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C854312299D17000D2E0DB /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		71C854352299E61700D2E0DB /* Request.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Request.plist; sourceTree = "<group>"; };
+		71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
+		71C85439229A1E9600D2E0DB /* MapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
+		71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		71C8543E229A21E300D2E0DB /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		71C85445229A249500D2E0DB /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		71C85448229A252800D2E0DB /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60D7A0328AB9DC3B3460EDB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EDA259B3AA14BADE2002A60 /* Pods-RestoYa.debug.xcconfig */,
+				043A97AF8339BD78C0D68971 /* Pods-RestoYa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		71C854022299C93C00D2E0DB = {
 			isa = PBXGroup;
 			children = (
 				71C8540D2299C93C00D2E0DB /* RestoYa */,
 				71C854222299C93E00D2E0DB /* RestoYaTests */,
 				71C8540C2299C93C00D2E0DB /* Products */,
+				60D7A0328AB9DC3B3460EDB3 /* Pods */,
+				F34751E703583E464BD68B6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +110,7 @@
 		71C8540D2299C93C00D2E0DB /* RestoYa */ = {
 			isa = PBXGroup;
 			children = (
+				71C8543D229A21D400D2E0DB /* Domain */,
 				71C854332299E35800D2E0DB /* Networking */,
 				71C854302299CDD400D2E0DB /* Logic */,
 				71C8542F2299CDC900D2E0DB /* Support */,
@@ -120,7 +150,9 @@
 		71C854302299CDD400D2E0DB /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				71C854102299C93C00D2E0DB /* MainListViewController.swift */,
+				71C85441229A242900D2E0DB /* MainComponent */,
+				71C85442229A243400D2E0DB /* RestaurantListing */,
+				71C85443229A244500D2E0DB /* MapFeature */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -128,6 +160,7 @@
 		71C854332299E35800D2E0DB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				71C85447229A251000D2E0DB /* Config */,
 				71C854342299E5D100D2E0DB /* API */,
 			);
 			path = Networking;
@@ -142,6 +175,57 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		71C8543D229A21D400D2E0DB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				71C8543E229A21E300D2E0DB /* Restaurant.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		71C85441229A242900D2E0DB /* MainComponent */ = {
+			isa = PBXGroup;
+			children = (
+				71C854102299C93C00D2E0DB /* MainListViewController.swift */,
+			);
+			path = MainComponent;
+			sourceTree = "<group>";
+		};
+		71C85442229A243400D2E0DB /* RestaurantListing */ = {
+			isa = PBXGroup;
+			children = (
+				71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */,
+			);
+			path = RestaurantListing;
+			sourceTree = "<group>";
+		};
+		71C85443229A244500D2E0DB /* MapFeature */ = {
+			isa = PBXGroup;
+			children = (
+				71C85439229A1E9600D2E0DB /* MapHandler.swift */,
+				71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */,
+			);
+			path = MapFeature;
+			sourceTree = "<group>";
+		};
+		71C85447229A251000D2E0DB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				71C85445229A249500D2E0DB /* NetworkProvider.swift */,
+				71C85448229A252800D2E0DB /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F34751E703583E464BD68B6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */,
+				25248F0CB7590FE4F8BC2CDF /* Pods_RestoYaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71C854282299C93E00D2E0DB /* Build configuration list for PBXNativeTarget "RestoYa" */;
 			buildPhases = (
+				D0E17E12EEA36869667F717F /* [CP] Check Pods Manifest.lock */,
 				71C854072299C93C00D2E0DB /* Sources */,
 				71C854082299C93C00D2E0DB /* Frameworks */,
 				71C854092299C93C00D2E0DB /* Resources */,
+				2938E445DEA8DF8AB965AB6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,13 +326,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2938E445DEA8DF8AB965AB6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0E17E12EEA36869667F717F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestoYa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71C854072299C93C00D2E0DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C85446229A249500D2E0DB /* NetworkProvider.swift in Sources */,
+				71C85438229A1CA000D2E0DB /* RestaurantDataSource.swift in Sources */,
 				71C854112299C93C00D2E0DB /* MainListViewController.swift in Sources */,
+				71C8543F229A21E300D2E0DB /* Restaurant.swift in Sources */,
 				71C8540F2299C93C00D2E0DB /* AppDelegate.swift in Sources */,
+				71C85449229A252800D2E0DB /* Config.swift in Sources */,
+				71C8543A229A1E9600D2E0DB /* MapHandler.swift in Sources */,
+				71C8543C229A1EF500D2E0DB /* LocationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +536,7 @@
 		};
 		71C854292299C93E00D2E0DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EDA259B3AA14BADE2002A60 /* Pods-RestoYa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -424,6 +555,7 @@
 		};
 		71C8542A2299C93E00D2E0DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043A97AF8339BD78C0D68971 /* Pods-RestoYa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
