@@ -19,8 +19,10 @@
 		71C8543A229A1E9600D2E0DB /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85439229A1E9600D2E0DB /* MapHandler.swift */; };
 		71C8543C229A1EF500D2E0DB /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */; };
 		71C8543F229A21E300D2E0DB /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8543E229A21E300D2E0DB /* Restaurant.swift */; };
-		71C85446229A249500D2E0DB /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85445229A249500D2E0DB /* NetworkProvider.swift */; };
+		71C85446229A249500D2E0DB /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85445229A249500D2E0DB /* RequestProvider.swift */; };
 		71C85449229A252800D2E0DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85448229A252800D2E0DB /* Config.swift */; };
+		71C85452229B12C400D2E0DB /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85451229B12C400D2E0DB /* EndPoints.swift */; };
+		71C85454229B1B3D00D2E0DB /* ResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */; };
 		E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +57,10 @@
 		71C85439229A1E9600D2E0DB /* MapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
 		71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		71C8543E229A21E300D2E0DB /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		71C85445229A249500D2E0DB /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		71C85445229A249500D2E0DB /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		71C85448229A252800D2E0DB /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		71C85451229B12C400D2E0DB /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +164,9 @@
 		71C854332299E35800D2E0DB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				71C85447229A251000D2E0DB /* Config */,
 				71C854342299E5D100D2E0DB /* API */,
+				71C85447229A251000D2E0DB /* Config */,
+				71C85455229B1B4A00D2E0DB /* Providers */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		71C854342299E5D100D2E0DB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				71C85451229B12C400D2E0DB /* EndPoints.swift */,
 				71C854312299D17000D2E0DB /* Keys.plist */,
 				71C854352299E61700D2E0DB /* Request.plist */,
 			);
@@ -211,10 +217,18 @@
 		71C85447229A251000D2E0DB /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				71C85445229A249500D2E0DB /* NetworkProvider.swift */,
 				71C85448229A252800D2E0DB /* Config.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		71C85455229B1B4A00D2E0DB /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				71C85445229A249500D2E0DB /* RequestProvider.swift */,
+				71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		F34751E703583E464BD68B6A /* Frameworks */ = {
@@ -369,9 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C85446229A249500D2E0DB /* NetworkProvider.swift in Sources */,
+				71C85446229A249500D2E0DB /* RequestProvider.swift in Sources */,
+				71C85452229B12C400D2E0DB /* EndPoints.swift in Sources */,
 				71C85438229A1CA000D2E0DB /* RestaurantDataSource.swift in Sources */,
 				71C854112299C93C00D2E0DB /* MainListViewController.swift in Sources */,
+				71C85454229B1B3D00D2E0DB /* ResponseProvider.swift in Sources */,
 				71C8543F229A21E300D2E0DB /* Restaurant.swift in Sources */,
 				71C8540F2299C93C00D2E0DB /* AppDelegate.swift in Sources */,
 				71C85449229A252800D2E0DB /* Config.swift in Sources */,
