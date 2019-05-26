@@ -5,6 +5,5 @@ target 'RestoYa' do
 
   # Pods for RestoYa
   pod 'Alamofire'
-  pod 'AlamofireImage'
-  pod 'ChiriUtils', '~> 0.0'
+  pod 'ChiriUtils'
 end

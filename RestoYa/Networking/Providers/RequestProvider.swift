@@ -7,12 +7,11 @@
 //
 
 import Alamofire
-import AlamofireImage
+import ChiriUtils
 
 class RequestProvider {
 
     static let shared = RequestProvider()
-    private let imageCache: AutoPurgingImageCache
     private let config: Config
     private var baseParameters: [String: String] {
         return ["clientId": config.baseKeys.clientId,
@@ -21,7 +20,6 @@ class RequestProvider {
     var token: Token?
 
     private init() {
-        imageCache = AutoPurgingImageCache()
         config = Config()
     }
 
@@ -35,19 +33,17 @@ class RequestProvider {
                      encoding: URLEncoding(arrayEncoding: .noBrackets))
             .validate()
             .responseData { [weak self] dataResponse in
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 guard let validData = dataResponse.data else {
                     print("Something went transforming token's raw data")
+                    self?.token = nil
                     return
                 }
                 do {
-                    let updatedToken = try decoder.decode(Token.self, from: validData)
-                    self?.token = updatedToken
+                    self?.token = try JSONDecodable.map(input: validData,
+                                                        with: .convertFromSnakeCase)
                     print("Current token: \(self?.token?.accessToken ?? "no token from API")")
                 } catch let error {
-                    print(error)
-                    print("Something went wrong decoding token's response")
+                    print(error.localizedDescription)
                 }
         }
     }
@@ -58,23 +54,5 @@ class RequestProvider {
             print(response.result.description)
             completion(response.result)
         }
-    }
-
-    // TODO: This method should be used to retrieve thumbnail images for restaurant's list (amoung other things)
-    func getImage(from originURL: String, using completion: @escaping (Result<Image>) -> ()) {
-        guard let savedImage = imageCache.image(withIdentifier: originURL) else {
-            Alamofire.request(originURL).responseImage { retrievedImage in
-                print(retrievedImage.description)
-                completion(retrievedImage.result)
-            }
-            return
-        }
-        let success: Result<Image> = .success(savedImage)
-        completion(success)
-    }
-
-    /// Updates image's asset on cache
-    func updateCache(with image: UIImage, at key: String) {
-        imageCache.add(image, withIdentifier: key)
     }
 }
