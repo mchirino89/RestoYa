@@ -20,7 +20,6 @@ struct ServiceResponse: Decodable {
 struct Restaurant: Decodable {
     let logo: String
     let shippingAmount: Int
-    let distance: Double
     let deliveryTimeMinMinutes: String
     let deliveryTimeMaxMinutes: String
     let address: String

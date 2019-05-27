@@ -17,7 +17,7 @@ struct RestaurantViewModel {
     }
 
     private var shippingCost: String {
-        return "💸 $\(data.shippingAmount) envío"
+        return data.shippingAmount > 0 ? "💸 $\(data.shippingAmount) envío" : "🎉 ¡Envío gratis!"
     }
 
     private var rating: String {

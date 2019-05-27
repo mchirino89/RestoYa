@@ -24,7 +24,7 @@ class MainListViewController: UIViewController {
         }
     }
 
-    private lazy var dataSource: RestaurantDataSource<Restaurant> = {
+    private lazy var dataSource: RestaurantDataSource = {
         let cellId = "restaurantCell"
         return RestaurantDataSource(cellId: cellId)
     }()
