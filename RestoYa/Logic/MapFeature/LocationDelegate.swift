@@ -15,25 +15,26 @@ protocol Locatable: class {
 class LocationDelegate: NSObject {
 
     weak var delegate: Locatable?
-    private var manager:CLLocationManager!
+    private var locationManager: CLLocationManager?
 
     init(delegate: Locatable) {
         self.delegate = delegate
         super.init()
-        manager = CLLocationManager()
-        manager.delegate = self
-        // In production environment the location should be handled using SLC as default option and only
-        // relying on this class of accuracy on demand for battery and UX sake
-        manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        manager.requestWhenInUseAuthorization()
     }
 
     func requestUpdate() {
-        manager.startUpdatingLocation()
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        // In production environment the location should be handled using SLC as default option and only
+        // relying on this class of accuracy on demand for battery and UX sake
+        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.startUpdatingLocation()
     }
 
     func stopUpdate() {
-        manager.stopUpdatingLocation()
+        locationManager?.stopUpdatingLocation()
+        locationManager = nil
     }
 }
 
@@ -53,6 +54,7 @@ extension LocationDelegate: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        stopUpdate()
         delegate?.updated(with: locations.last)
     }
 }

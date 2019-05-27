@@ -6,7 +6,6 @@
 //  Copyright © 2019 Mauricio Chirino. All rights reserved.
 //
 
-import UIKit
 import MapKit
 
 class MainListViewController: UIViewController {
@@ -58,13 +57,11 @@ extension MainListViewController: Locatable {
     func updated(with latest: CLLocation?) {
         print("Location retrieved: \(String(describing: latest))")
         locationDelegate.stopUpdate()
-        guard let retrievedPoint = latest?.coordinate else {
-            responseService.fetchRestaurants(on: nil)
-            return
-        }
+        responseService.fetchRestaurants(on: latest)
+        // Additional handling should be added in production code for alternative paths. Right now
+        // we're assuming location access is granted in order to provide full map experience
+        guard let retrievedPoint = latest?.coordinate else { return }
         setWalkingDistanceZoom(for: retrievedPoint)
-        // TODO: Improve this architecture leak (data transformation on ViewController)
-        responseService.fetchRestaurants(on: "\(retrievedPoint.latitude), \(retrievedPoint.longitude)")
     }
 
     private func setWalkingDistanceZoom(for coordinate: CLLocationCoordinate2D) {

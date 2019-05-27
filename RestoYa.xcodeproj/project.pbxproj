@@ -23,6 +23,8 @@
 		71C85449229A252800D2E0DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85448229A252800D2E0DB /* Config.swift */; };
 		71C85452229B12C400D2E0DB /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85451229B12C400D2E0DB /* EndPoints.swift */; };
 		71C85454229B1B3D00D2E0DB /* ResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */; };
+		71C85459229BECB900D2E0DB /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85458229BECB900D2E0DB /* Parameters.swift */; };
+		71C8545B229BED2300D2E0DB /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8545A229BED2300D2E0DB /* UserLocation.swift */; };
 		E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		71C85448229A252800D2E0DB /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		71C85451229B12C400D2E0DB /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProvider.swift; sourceTree = "<group>"; };
+		71C85458229BECB900D2E0DB /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		71C8545A229BED2300D2E0DB /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				71C8543E229A21E300D2E0DB /* Restaurant.swift */,
+				71C8545A229BED2300D2E0DB /* UserLocation.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				71C85448229A252800D2E0DB /* Config.swift */,
+				71C85458229BECB900D2E0DB /* Parameters.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 				71C8540F2299C93C00D2E0DB /* AppDelegate.swift in Sources */,
 				71C85449229A252800D2E0DB /* Config.swift in Sources */,
 				71C8543A229A1E9600D2E0DB /* MapHandler.swift in Sources */,
+				71C8545B229BED2300D2E0DB /* UserLocation.swift in Sources */,
 				71C8543C229A1EF500D2E0DB /* LocationDelegate.swift in Sources */,
+				71C85459229BECB900D2E0DB /* Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

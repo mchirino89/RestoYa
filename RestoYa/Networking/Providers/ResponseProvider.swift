@@ -8,6 +8,7 @@
 
 import Alamofire
 import ChiriUtils
+import CoreLocation
 
 enum DataState {
     case loaded([Restaurant])
@@ -32,7 +33,7 @@ class ResponseProvider {
         self.delegate = delegate
     }
 
-    func fetchRestaurants(on coordinates: String?) {
+    func fetchRestaurants(on coordinates: CLLocation?) {
         // Token doesn't exist or it has expired
         if RequestProvider.shared.token == nil {
             // In a production environment, token initial setup should happen on AppDelegate's
@@ -46,11 +47,12 @@ class ResponseProvider {
         }
     }
 
-    private func buildResponseConfig(for coordinates: String?) -> ResponseConfig {
+    private func buildResponseConfig(for coordinates: CLLocation?) -> ResponseConfig {
         let parameters = RequestProvider.shared.config.parameters
-        let point = coordinates ?? parameters.point
+        let userLocation = UserLocation(retrievedPoint: coordinates,
+                                        preloadedPoint: parameters.point).point
         let fetchParameters: [String: Any] = [ Request.Parameter.country.value: parameters.country,
-                                               Request.Parameter.point.value: point,
+                                               Request.Parameter.point.value: userLocation,
                                                Request.Parameter.max.value: parameters.max,
                                                Request.Parameter.offset.value: parameters.offset,
                                                Request.Parameter.fields.value: parameters.fields]
@@ -58,7 +60,7 @@ class ResponseProvider {
         return ResponseConfig(endpoint: .restaurants, parameters: fetchParameters, headers: headers)
     }
 
-    private func queryRestaurants(on coordinates: String?) {
+    private func queryRestaurants(on coordinates: CLLocation?) {
         let requestConfig = buildResponseConfig(for: coordinates)
         RequestProvider.shared.getData(basedOn: requestConfig) { [weak self] response in
             guard let self = self else { return }
