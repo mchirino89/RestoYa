@@ -12,11 +12,7 @@ import ChiriUtils
 class RequestProvider {
 
     static let shared = RequestProvider()
-    private let config: Config
-    private var baseParameters: [String: String] {
-        return ["clientId": config.baseKeys.clientId,
-                "clientSecret": config.baseKeys.clientSecret]
-    }
+    let config: Config
     var token: Token?
 
     private init() {
@@ -25,12 +21,8 @@ class RequestProvider {
 
     func setup() {
         let tokenURL = config.baseKeys.baseURL + EndPoints.token.value
-
         Alamofire
-            .request(tokenURL,
-                     method: .get,
-                     parameters: baseParameters,
-                     encoding: URLEncoding(arrayEncoding: .noBrackets))
+            .request(tokenURL, parameters: config.baseParameters)
             .validate()
             .responseData { [weak self] dataResponse in
                 guard let validData = dataResponse.data else {
@@ -48,11 +40,20 @@ class RequestProvider {
         }
     }
 
-    func getData(from endpoint: EndPoints, using completion: @escaping (Result<Data>) -> ()) {
+    // This method should receive user's location
+    func getData(from endpoint: EndPoints,
+                 with parameters: [String: Any],
+                 using completion: @escaping (Result<Data>) -> ()) {
         let originURL = config.baseKeys.baseURL + endpoint.value
-        Alamofire.request(originURL).validate().responseData { response in
-            print(response.result.description)
-            completion(response.result)
+        let mergedParameters = parameters.merging(config.baseParameters) { (_, _) in }
+        print(mergedParameters)
+        // .request(, encoding: URLEncoding(arrayEncoding: .noBrackets))
+        Alamofire
+            .request(originURL, parameters: mergedParameters)
+            .validate()
+            .responseData { response in
+                print(response.result.description)
+                completion(response.result)
         }
     }
 }

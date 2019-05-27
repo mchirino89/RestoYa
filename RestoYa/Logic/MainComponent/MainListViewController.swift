@@ -40,13 +40,24 @@ class MainListViewController: UIViewController {
         }
     }
 
+    private lazy var responseService: ResponseProvider = {
+        return ResponseProvider(delegate: self)
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        responseService.fetchRestaurants()
     }
 }
 
 extension MainListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension MainListViewController: ResponseHandable {
+    func responseOutput(result: DataState) {
+        print("Fetch restaurants result: \(result)")
     }
 }

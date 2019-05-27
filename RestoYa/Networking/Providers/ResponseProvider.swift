@@ -26,7 +26,13 @@ class ResponseProvider {
     }
 
     func fetchRestaurants() {
-        RequestProvider.shared.getData(from: .restaurants) { [weak self] response in
+        let parameters = RequestProvider.shared.config.parameters
+        let fetchParameters: [String: Any] = [ Request.Parameter.country.value: parameters.country,
+                                               Request.Parameter.point.value: parameters.point,
+                                               Request.Parameter.max.value: parameters.max,
+                                               Request.Parameter.offset.value: parameters.offset,
+                                               Request.Parameter.fields.value: parameters.fields]
+        RequestProvider.shared.getData(from: .restaurants, with: fetchParameters) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let value):
