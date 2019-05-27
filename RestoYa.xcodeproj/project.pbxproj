@@ -10,7 +10,6 @@
 		71C8540F2299C93C00D2E0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8540E2299C93C00D2E0DB /* AppDelegate.swift */; };
 		71C854112299C93C00D2E0DB /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C854102299C93C00D2E0DB /* MainListViewController.swift */; };
 		71C854142299C93C00D2E0DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C854122299C93C00D2E0DB /* Main.storyboard */; };
-		71C854162299C93E00D2E0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C854152299C93E00D2E0DB /* Assets.xcassets */; };
 		71C854192299C93E00D2E0DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */; };
 		71C854242299C93E00D2E0DB /* RestoYaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C854232299C93E00D2E0DB /* RestoYaTests.swift */; };
 		71C854322299D17000D2E0DB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854312299D17000D2E0DB /* Keys.plist */; };
@@ -27,6 +26,7 @@
 		71C8545B229BED2300D2E0DB /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8545A229BED2300D2E0DB /* UserLocation.swift */; };
 		71C85461229C00CA00D2E0DB /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85460229C00CA00D2E0DB /* RestaurantViewCell.swift */; };
 		71C85463229C4A7800D2E0DB /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85462229C4A7800D2E0DB /* RestaurantViewModel.swift */; };
+		71C85464229C8E7100D2E0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C854152299C93E00D2E0DB /* Assets.xcassets */; };
 		E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */; };
 /* End PBXBuildFile section */
 
@@ -359,8 +359,8 @@
 				71C854192299C93E00D2E0DB /* LaunchScreen.storyboard in Resources */,
 				71C854322299D17000D2E0DB /* Keys.plist in Resources */,
 				71C854362299E61700D2E0DB /* Request.plist in Resources */,
-				71C854162299C93E00D2E0DB /* Assets.xcassets in Resources */,
 				71C854142299C93C00D2E0DB /* Main.storyboard in Resources */,
+				71C85464229C8E7100D2E0DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

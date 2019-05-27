@@ -49,6 +49,10 @@ class MainListViewController: UIViewController {
         locationDelegate.requestUpdate()
     }
 
+    @IBAction func centerLocationAction(_ sender: UIBarButtonItem) {
+        mainMapView.setUserTrackingMode(.follow, animated: true)
+    }
+
     private func updateRestaurants(basedOn location: CLLocation?) {
         toggleWaiting(isHidden: false)
         responseService.fetchRestaurants(on: location)
@@ -97,7 +101,7 @@ extension MainListViewController: Locatable {
     }
 
     private func setWalkingDistanceZoom(for coordinate: CLLocationCoordinate2D) {
-        let roundMeassure: Double = 2000
+        let roundMeassure: Double = 3000
         let walkingRegion = MKCoordinateRegion(center: coordinate,
                                                latitudinalMeters: roundMeassure,
                                                longitudinalMeters: roundMeassure)

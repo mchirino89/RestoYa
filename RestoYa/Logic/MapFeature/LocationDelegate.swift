@@ -44,12 +44,12 @@ extension LocationDelegate: CLLocationManagerDelegate {
         switch status {
         case .restricted, .denied:
             print("No location permission granted")
+            delegate?.updated(with: nil)
             stopUpdate()
         case .authorizedWhenInUse, .authorizedAlways:
             print("We're good to go")
         default:
             print("The user hasn't made up his mind yet")
-            stopUpdate()
         }
     }
 

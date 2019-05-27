@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-756" y="130"/>
         </scene>
-        <!--Lista-->
+        <!--RestoYa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainListViewController" customModule="RestoYa" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-A5-lE1" userLabel="Thumbnail Image View">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-A5-lE1" userLabel="Thumbnail Image View">
                                                             <rect key="frame" x="16" y="16" width="48" height="48"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="48" id="7wh-Fg-04z"/>
@@ -163,7 +163,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lista" id="JmU-6n-Mgo"/>
+                    <navigationItem key="navigationItem" title="RestoYa" id="JmU-6n-Mgo">
+                        <barButtonItem key="leftBarButtonItem" image="location" id="Sc9-FC-GkB">
+                            <color key="tintColor" red="0.51866319439999997" green="0.1058823529" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="centerLocationAction:" destination="BYZ-38-t0r" id="SUH-h7-SdM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="bAm-QR-wU3" id="GR7-G2-qP9"/>
                         <outlet property="mainMapView" destination="zdj-Rj-uLE" id="7DD-uU-dl8"/>
@@ -175,4 +182,8 @@
             <point key="canvasLocation" x="138.75" y="129.92957746478874"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="foodIcon" width="64" height="64"/>
+        <image name="location" width="32" height="32"/>
+    </resources>
 </document>
