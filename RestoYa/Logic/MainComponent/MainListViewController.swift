@@ -25,7 +25,7 @@ class MainListViewController: UIViewController {
     }
 
     private lazy var dataSource: RestaurantDataSource<Restaurant> = {
-        let cellId = "userCell"
+        let cellId = "restaurantCell"
         return RestaurantDataSource(cellId: cellId)
     }()
 
@@ -33,7 +33,8 @@ class MainListViewController: UIViewController {
         didSet {
             listTableView.delegate = self
             listTableView.dataSource = dataSource
-            listTableView.rowHeight = 120
+            listTableView.estimatedRowHeight = 100
+            listTableView.rowHeight = UITableView.automaticDimension
         }
     }
 
@@ -51,8 +52,10 @@ extension MainListViewController: ResponseHandable {
     func responseOutput(result: DataState) {
         switch result {
         case .loaded(let restaurants):
-            print("Successfully obtain restaurants: \(restaurants)")
+            dataSource.updateList(with: restaurants)
+            listTableView.reloadData()
         case .failure(let error):
+            // Retry policy would be here in a production scenario
             print("Something went wrong during service retrieving operation: \(error)")
         }
     }

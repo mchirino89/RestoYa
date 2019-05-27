@@ -6,9 +6,9 @@
 //  Copyright © 2019 Mauricio Chirino. All rights reserved.
 //
 
-import UIKit
+import ChiriUtils
 
-// Funny fact: the compailer complains if I put the UITableViewDataSource methods in a
+// Fun fact: the compailer complains if I put the UITableViewDataSource methods in a
 // extension (@objc related errors)
 class RestaurantDataSource<T: Decodable>: NSObject, UITableViewDataSource {
 
@@ -20,12 +20,21 @@ class RestaurantDataSource<T: Decodable>: NSObject, UITableViewDataSource {
         dataSource = []
     }
 
+    func updateList(with dataSource: [T]) {
+        self.dataSource.removeAll()
+        self.dataSource = dataSource
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        // A more protocol oriented approach should be put here in order to avoid this kind of casting
+        let currentRestaurant: Restaurant = dataSource[indexPath.row] as! Restaurant
+        let cell: RestaurantViewCell = tableView.deque(for: cellId)
+        cell.setup(RestaurantViewModel(data: currentRestaurant))
+        return cell
     }
 
 }

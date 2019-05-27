@@ -10,15 +10,14 @@ import MapKit
 
 class MapHandler: NSObject, MKMapViewDelegate {
 
-    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("MAP DEBUGGING - did change region animated \(mapView.centerCoordinate)")
     }
 
-    func mapViewWillStartLocatingUser(_ mapView: MKMapView) {
-
+    /// TODO: Places the focus for the tapped pin on its corresponding cell row
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("MAP DEBUGGING - did tapped on \(view)")
     }
 
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        
-    }
+
 }
