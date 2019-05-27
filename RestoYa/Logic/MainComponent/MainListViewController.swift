@@ -14,13 +14,13 @@ class MainListViewController: UIViewController {
         return LocationDelegate(delegate: self)
     }()
 
-    private lazy var mapDelegate: MapHandler = {
+    private lazy var mapHandler: MapHandler = {
         return MapHandler()
     }()
 
     @IBOutlet weak var mainMapView: MKMapView! {
         didSet {
-            mainMapView.delegate = mapDelegate
+            mainMapView.delegate = mapHandler
         }
     }
 
@@ -42,9 +42,16 @@ class MainListViewController: UIViewController {
         return ResponseProvider(delegate: self)
     }()
 
+    @IBOutlet weak var waitingEffectView: UIVisualEffectView!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationDelegate.requestUpdate()
+    }
+
+    private func updateRestaurants(basedOn location: CLLocation?) {
+        toggleWaiting(isHidden: false)
+        responseService.fetchRestaurants(on: location)
     }
 }
 
@@ -58,6 +65,23 @@ extension MainListViewController: ResponseHandable {
             // Retry policy would be here in a production scenario
             print("Something went wrong during service retrieving operation: \(error)")
         }
+        // Sets the delegate only after first load to avoin init recursiveness from map rendering
+        mapHandler.setDelegate(self)
+        toggleWaiting(isHidden: true)
+    }
+
+    private func toggleWaiting(isHidden: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            self.waitingEffectView.transform = isHidden ? CGAffineTransform(translationX: 0, y: 2000) : .identity
+        }
+    }
+}
+
+extension MainListViewController: MapHandable {
+    // Experimental feature to make map more dynamic. A proper cache policy should be implemented in order
+    // to avoid so many hits to the server
+    func didMovedMap(onto newLocation: CLLocation) {
+        updateRestaurants(basedOn: newLocation)
     }
 }
 
@@ -65,7 +89,7 @@ extension MainListViewController: Locatable {
     func updated(with latest: CLLocation?) {
         print("Location retrieved: \(String(describing: latest))")
         locationDelegate.stopUpdate()
-        responseService.fetchRestaurants(on: latest)
+        updateRestaurants(basedOn: latest)
         // Additional handling should be added in production code for alternative paths. Right now
         // we're assuming location access is granted in order to provide full map experience
         guard let retrievedPoint = latest?.coordinate else { return }
