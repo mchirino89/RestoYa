@@ -9,7 +9,7 @@
 import MapKit
 
 protocol Locatable: class {
-    func updated(with latest: CLLocation)
+    func updated(with latest: CLLocation?)
 }
 
 class LocationDelegate: NSObject {
@@ -22,12 +22,9 @@ class LocationDelegate: NSObject {
         super.init()
         manager = CLLocationManager()
         manager.delegate = self
-        // Here we compromise, not using the "best" location will keep battery consumption in check
+        // In production environment the location should be handled using SLC as default option and only
+        // relying on this class of accuracy on demand for battery and UX sake
         manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        // Another compromise, by asking only "when in use" authorization not only does battery is taken care
-        // of but we avoid being to demanding on resources for the OS. The big status "X app is using
-        // your location" flash can be daunting for most users unless they absolutely understand the
-        // need for it.
         manager.requestWhenInUseAuthorization()
     }
 
@@ -56,10 +53,6 @@ extension LocationDelegate: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let latest = locations.last else {
-            print("No location is available at this time")
-            return
-        }
-        delegate?.updated(with: latest)
+        delegate?.updated(with: locations.last)
     }
 }

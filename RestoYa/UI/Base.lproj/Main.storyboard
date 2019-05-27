@@ -39,6 +39,7 @@
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zdj-Rj-uLE">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                                        <color key="tintColor" red="0.51866319439999997" green="0.1058823529" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                     </mapView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-QR-wU3">
                                         <rect key="frame" x="0.0" y="168" width="320" height="336"/>

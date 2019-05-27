@@ -42,11 +42,6 @@ class MainListViewController: UIViewController {
         return ResponseProvider(delegate: self)
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        responseService.fetchRestaurants()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         locationDelegate.requestUpdate()
@@ -60,10 +55,16 @@ extension MainListViewController: ResponseHandable {
 }
 
 extension MainListViewController: Locatable {
-    func updated(with latest: CLLocation) {
-        print("Location retrieved: \(latest)")
+    func updated(with latest: CLLocation?) {
+        print("Location retrieved: \(String(describing: latest))")
         locationDelegate.stopUpdate()
-        setWalkingDistanceZoom(for: latest.coordinate)
+        guard let retrievedPoint = latest?.coordinate else {
+            responseService.fetchRestaurants(on: nil)
+            return
+        }
+        setWalkingDistanceZoom(for: retrievedPoint)
+        // TODO: Improve this architecture leak (data transformation on ViewController)
+        responseService.fetchRestaurants(on: "\(retrievedPoint.latitude), \(retrievedPoint.longitude)")
     }
 
     private func setWalkingDistanceZoom(for coordinate: CLLocationCoordinate2D) {

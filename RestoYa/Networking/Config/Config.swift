@@ -10,6 +10,14 @@ import Foundation
 
 struct Token: Decodable {
     let accessToken: String
+
+    enum Header: String {
+        case authorization
+
+        var value: String {
+            return self.rawValue.capitalized
+        }
+    }
 }
 
 struct Keys: Decodable {

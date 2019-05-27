@@ -16,8 +16,8 @@ enum DataState {
 
 struct ResponseConfig {
     let endpoint: EndPoints
-    let parameters: [String: Any]?
-    let headers: [String: Any]?
+    let parameters: [String: Any]
+    let headers: [String: String]
 }
 
 protocol ResponseHandable: class {
@@ -32,25 +32,35 @@ class ResponseProvider {
         self.delegate = delegate
     }
 
-    func fetchRestaurants() {
-
+    func fetchRestaurants(on coordinates: String?) {
         // Token doesn't exist or it has expired
         if RequestProvider.shared.token == nil {
-            RequestProvider.shared.setup()
+            // In a production environment, token initial setup should happen on AppDelegate's
+            // didFinishLaunchingWithOptions method and a queue system would be in place to keep proper
+            // serial order in services requests.
+            RequestProvider.shared.setup { [unowned self] in
+                self.queryRestaurants(on: coordinates)
+            }
         } else {
-
+            queryRestaurants(on: coordinates)
         }
     }
 
-    private func queryRestaurants() {
+    private func buildResponseConfig(for coordinates: String?) -> ResponseConfig {
         let parameters = RequestProvider.shared.config.parameters
+        let point = coordinates ?? parameters.point
         let fetchParameters: [String: Any] = [ Request.Parameter.country.value: parameters.country,
-                                               Request.Parameter.point.value: parameters.point,
+                                               Request.Parameter.point.value: point,
                                                Request.Parameter.max.value: parameters.max,
                                                Request.Parameter.offset.value: parameters.offset,
                                                Request.Parameter.fields.value: parameters.fields]
+        let headers = [Token.Header.authorization.value : RequestProvider.shared.token!.accessToken]
+        return ResponseConfig(endpoint: .restaurants, parameters: fetchParameters, headers: headers)
+    }
 
-        RequestProvider.shared.getData(from: .restaurants, with: fetchParameters) { [weak self] response in
+    private func queryRestaurants(on coordinates: String?) {
+        let requestConfig = buildResponseConfig(for: coordinates)
+        RequestProvider.shared.getData(basedOn: requestConfig) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let value):

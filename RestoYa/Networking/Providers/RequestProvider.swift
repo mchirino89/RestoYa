@@ -19,7 +19,7 @@ class RequestProvider {
         config = Config()
     }
 
-    func setup() {
+    func setup(completion: @escaping () -> ()) {
         let tokenURL = config.baseKeys.baseURL + EndPoints.token.value
         Alamofire
             .request(tokenURL, parameters: config.baseParameters)
@@ -32,6 +32,7 @@ class RequestProvider {
                 }
                 do {
                     self?.token = try JSONDecodable.map(input: validData, with: .convertFromSnakeCase)
+                    completion()
                     print("Current token: \(self?.token?.accessToken ?? "no token from API")")
                 } catch let error {
                     print(error.localizedDescription)
@@ -39,16 +40,11 @@ class RequestProvider {
         }
     }
 
-    // This method should receive user's location
-    func getData(from endpoint: EndPoints,
-                 with parameters: [String: Any],
-                 using completion: @escaping (Result<Data>) -> ()) {
-        let originURL = config.baseKeys.baseURL + endpoint.value
-        let mergedParameters = parameters.merging(config.baseParameters) { (_, _) in }
-        print(mergedParameters)
-        // .request(, encoding: URLEncoding(arrayEncoding: .noBrackets))
+    func getData(basedOn responseConfig: ResponseConfig, with completion: @escaping (Result<Data>) -> ()) {
+        let originURL = config.baseKeys.baseURL + responseConfig.endpoint.value
+        let mergedParameters = responseConfig.parameters.merging(config.baseParameters) { (_, _) in }
         Alamofire
-            .request(originURL, parameters: mergedParameters)
+            .request(originURL, parameters: mergedParameters, headers: responseConfig.headers)
             .validate()
             .responseData { response in
                 print(response.result.description)
