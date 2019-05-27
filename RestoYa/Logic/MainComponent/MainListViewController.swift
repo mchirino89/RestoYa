@@ -49,7 +49,12 @@ class MainListViewController: UIViewController {
 
 extension MainListViewController: ResponseHandable {
     func responseOutput(result: DataState) {
-        print("Fetch restaurants result: \(result)")
+        switch result {
+        case .loaded(let restaurants):
+            print("Successfully obtain restaurants: \(restaurants)")
+        case .failure(let error):
+            print("Something went wrong during service retrieving operation: \(error)")
+        }
     }
 }
 

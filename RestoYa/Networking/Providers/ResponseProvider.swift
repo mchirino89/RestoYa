@@ -75,8 +75,8 @@ class ResponseProvider {
     
     private func handleSuccessResponse(for data: Data, and delegate: ResponseHandable?) {
         do {
-            let restaurants: [Restaurant] = try JSONDecodable.map(input: data)
-            let success: DataState = .loaded(restaurants)
+            let retrievedResults: ServiceResponse = try JSONDecodable.map(input: data)
+            let success: DataState = .loaded(retrievedResults.data)
             delegate?.responseOutput(result: success)
         } catch let error {
             handleFailure(for: error, and: delegate)
