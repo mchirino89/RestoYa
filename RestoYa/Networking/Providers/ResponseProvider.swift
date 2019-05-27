@@ -7,10 +7,15 @@
 //
 
 import Alamofire
+import ChiriUtils
 
 enum DataState {
     case loaded([Restaurant])
     case failure(Error)
+}
+
+struct ResponseConfig {
+
 }
 
 protocol ResponseHandable: class {
@@ -26,12 +31,23 @@ class ResponseProvider {
     }
 
     func fetchRestaurants() {
+
+        // Token doesn't exist or it has expired
+        if RequestProvider.shared.token == nil {
+            RequestProvider.shared.setup()
+        } else {
+
+        }
+    }
+
+    private func queryRestaurants() {
         let parameters = RequestProvider.shared.config.parameters
         let fetchParameters: [String: Any] = [ Request.Parameter.country.value: parameters.country,
                                                Request.Parameter.point.value: parameters.point,
                                                Request.Parameter.max.value: parameters.max,
                                                Request.Parameter.offset.value: parameters.offset,
                                                Request.Parameter.fields.value: parameters.fields]
+
         RequestProvider.shared.getData(from: .restaurants, with: fetchParameters) { [weak self] response in
             guard let self = self else { return }
             switch response {
@@ -44,10 +60,9 @@ class ResponseProvider {
     }
     
     private func handleSuccessResponse(for data: Data, and delegate: ResponseHandable?) {
-        let decode = JSONDecoder()
         do {
-            let users: [Restaurant] = try decode.decode([Restaurant].self, from: data)
-            let success: DataState = .loaded(users)
+            let restaurants: [Restaurant] = try JSONDecodable.map(input: data)
+            let success: DataState = .loaded(restaurants)
             delegate?.responseOutput(result: success)
         } catch let error {
             handleFailure(for: error, and: delegate)

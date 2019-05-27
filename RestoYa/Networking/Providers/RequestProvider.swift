@@ -31,8 +31,7 @@ class RequestProvider {
                     return
                 }
                 do {
-                    self?.token = try JSONDecodable.map(input: validData,
-                                                        with: .convertFromSnakeCase)
+                    self?.token = try JSONDecodable.map(input: validData, with: .convertFromSnakeCase)
                     print("Current token: \(self?.token?.accessToken ?? "no token from API")")
                 } catch let error {
                     print(error.localizedDescription)

@@ -12,7 +12,7 @@ import MapKit
 class MainListViewController: UIViewController {
 
     private lazy var locationDelegate: LocationDelegate = {
-        let location = LocationDelegate()
+        let location = LocationDelegate(delegate: self)
         return location
     }()
 
@@ -48,16 +48,27 @@ class MainListViewController: UIViewController {
         super.viewDidLoad()
         responseService.fetchRestaurants()
     }
-}
 
-extension MainListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationDelegate.requestUpdate()
     }
 }
 
 extension MainListViewController: ResponseHandable {
     func responseOutput(result: DataState) {
         print("Fetch restaurants result: \(result)")
+    }
+}
+
+extension MainListViewController: Locatable {
+    func updated(with latest: CLLocation) {
+
+    }
+}
+
+extension MainListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
     }
 }
