@@ -15,7 +15,7 @@ protocol Locatable: class {
 class LocationDelegate: NSObject {
 
     weak var delegate: Locatable?
-    var manager:CLLocationManager!
+    private var manager:CLLocationManager!
 
     init(delegate: Locatable) {
         self.delegate = delegate
@@ -34,6 +34,10 @@ class LocationDelegate: NSObject {
     func requestUpdate() {
         manager.startUpdatingLocation()
     }
+
+    func stopUpdate() {
+        manager.stopUpdatingLocation()
+    }
 }
 
 extension LocationDelegate: CLLocationManagerDelegate {
@@ -42,10 +46,12 @@ extension LocationDelegate: CLLocationManagerDelegate {
         switch status {
         case .restricted, .denied:
             print("No location permission granted")
+            stopUpdate()
         case .authorizedWhenInUse, .authorizedAlways:
             print("We're good to go")
         default:
             print("The user hasn't made up his mind yet")
+            stopUpdate()
         }
     }
 

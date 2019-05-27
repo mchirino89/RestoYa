@@ -15,7 +15,9 @@ enum DataState {
 }
 
 struct ResponseConfig {
-
+    let endpoint: EndPoints
+    let parameters: [String: Any]?
+    let headers: [String: Any]?
 }
 
 protocol ResponseHandable: class {

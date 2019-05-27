@@ -8,11 +8,7 @@
 
 import MapKit
 
-class MapHandler: NSObject {
-
-}
-
-extension MapHandler: MKMapViewDelegate {
+class MapHandler: NSObject, MKMapViewDelegate {
 
     func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
 

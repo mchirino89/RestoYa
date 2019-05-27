@@ -12,13 +12,11 @@ import MapKit
 class MainListViewController: UIViewController {
 
     private lazy var locationDelegate: LocationDelegate = {
-        let location = LocationDelegate(delegate: self)
-        return location
+        return LocationDelegate(delegate: self)
     }()
 
     private lazy var mapDelegate: MapHandler = {
-        let mapHandler = MapHandler()
-        return mapHandler
+        return MapHandler()
     }()
 
     @IBOutlet weak var mainMapView: MKMapView! {
@@ -63,12 +61,25 @@ extension MainListViewController: ResponseHandable {
 
 extension MainListViewController: Locatable {
     func updated(with latest: CLLocation) {
+        print("Location retrieved: \(latest)")
+        locationDelegate.stopUpdate()
+        setWalkingDistanceZoom(for: latest.coordinate)
+    }
 
+    private func setWalkingDistanceZoom(for coordinate: CLLocationCoordinate2D) {
+        let roundMeassure: Double = 2000
+        let walkingRegion = MKCoordinateRegion(center: coordinate,
+                                               latitudinalMeters: roundMeassure,
+                                               longitudinalMeters: roundMeassure)
+        mainMapView.setCenter(coordinate, animated: true)
+        mainMapView.setRegion(walkingRegion, animated: true)
     }
 }
 
 extension MainListViewController: UITableViewDelegate {
+    /// Focus map's camera on restaurants location
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     }
 }
+
