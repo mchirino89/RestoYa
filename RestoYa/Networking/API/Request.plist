@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>country</key>
+	<string>1</string>
+	<key>point</key>
+	<string>-34.901112, -56.164532</string>
+	<key>max</key>
+	<string>15</string>
+	<key>offset</key>
+	<string>0</string>
+	<key>fields</key>
+	<array>
+		<string>name</string>
+		<string>logo</string>
+		<string>sortingDistance</string>
+		<string>deliveryTimeMinMinutes</string>
+		<string>deliveryTimeMaxMinutes</string>
+		<string>generalScore</string>
+		<string>coordinates</string>
+		<string>address</string>
+		<string>shippingAmount</string>
+		<string>allCategories</string>
+		<string>paymentMethods</string>
+	</array>
+</dict>
+</plist>
