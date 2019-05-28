@@ -21,6 +21,7 @@ struct Config: Decodable {
 
     var baseKeys: Keys
     var parameters: Request
+    var pagingSize: Int { return Int(parameters.max) ?? 15 }
     var baseParameters: [String: Any] {
         return [Keys.Parameter.clientId.value: baseKeys.clientId,
                 Keys.Parameter.clientSecret.value: baseKeys.clientSecret]

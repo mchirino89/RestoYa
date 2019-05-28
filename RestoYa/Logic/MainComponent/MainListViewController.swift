@@ -60,16 +60,19 @@ class MainListViewController: UIViewController {
 }
 
 extension MainListViewController: ResponseHandable {
+
     func responseOutput(result: DataState) {
         switch result {
         case .loaded(let restaurants):
             dataSource.updateList(with: restaurants)
+            mapHandler.update(restaurants.map { RestaurantPinViewModel(restaurantData: $0) })
+            mainMapView.addAnnotations(mapHandler.pins)
             listTableView.reloadData()
         case .failure(let error):
-            // Retry policy would be here in a production scenario
+            //- Retry policy would be here in a production scenario
             print("Something went wrong during service retrieving operation: \(error)")
         }
-        // Sets the delegate only after first load to avoin init recursiveness from map rendering
+        //- Sets the delegate only after first load to avoin init recursiveness from map rendering
         mapHandler.setDelegate(self)
         toggleWaiting(isHidden: true)
     }
@@ -79,23 +82,25 @@ extension MainListViewController: ResponseHandable {
             self.waitingEffectView.transform = isHidden ? CGAffineTransform(translationX: 0, y: 2000) : .identity
         }
     }
+
 }
 
 extension MainListViewController: MapHandable {
-    // Experimental feature to make map more dynamic. A proper cache policy should be implemented in order
-    // to avoid so many hits to the server
+    //- Experimental feature to make map more dynamic. A proper cache policy should be implemented in
+    // order to avoid so many hits to the server
     func didMovedMap(onto newLocation: CLLocation) {
         updateRestaurants(basedOn: newLocation)
     }
 }
 
 extension MainListViewController: Locatable {
+
     func updated(with latest: CLLocation?) {
         print("Location retrieved: \(String(describing: latest))")
         locationDelegate.stopUpdate()
         updateRestaurants(basedOn: latest)
-        // Additional handling should be added in production code for alternative paths. Right now
-        // we're assuming location access is granted in order to provide full map experience
+        //- Additional handling should be added in production code for alternative paths. Right now
+        //  we're assuming location access is granted in order to provide full map experience
         guard let retrievedPoint = latest?.coordinate else { return }
         setWalkingDistanceZoom(for: retrievedPoint)
     }
@@ -108,12 +113,13 @@ extension MainListViewController: Locatable {
         mainMapView.setCenter(coordinate, animated: true)
         mainMapView.setRegion(walkingRegion, animated: true)
     }
+
 }
 
+//- TODO: selecting a restaurant from a cell should move the map's camare to its pin
 extension MainListViewController: UITableViewDelegate {
     /// Focus map's camera on restaurants location
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     }
 }
-

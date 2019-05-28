@@ -49,8 +49,8 @@ class ResponseProvider {
 
     private func buildResponseConfig(for coordinates: CLLocation?) -> ResponseConfig {
         let parameters = RequestProvider.shared.config.parameters
-        let userLocation = UserLocation(retrievedPoint: coordinates,
-                                        preloadedPoint: parameters.point).point
+        let userLocation = Location2D(retrievedPoint: coordinates,
+                                      preloadedPoint: parameters.point).point
         let fetchParameters: [String: Any] = [ Request.Parameter.country.value: parameters.country,
                                                Request.Parameter.point.value: userLocation,
                                                Request.Parameter.max.value: parameters.max,
