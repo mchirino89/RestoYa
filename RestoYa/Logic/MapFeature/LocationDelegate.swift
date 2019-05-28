@@ -25,8 +25,8 @@ class LocationDelegate: NSObject {
     func requestUpdate() {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
-        // In production environment the location should be handled using SLC as default option and only
-        // relying on this class of accuracy on demand for battery and UX sake
+        //- In production environment the location should be handled using SLC as default option and only
+        //  relying on this class of accuracy on demand for battery and UX sake
         locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.startUpdatingLocation()

@@ -38,9 +38,9 @@ struct Config: Decodable {
         parameters = decodedXML(for: .request)
     }
 
-    // Force casting in all these instructions is justified since it's the initial configuration
-    // it's referring to. The app should absolutely crash in case something goes wrong in such an early
-    // stage.
+    //-  Force casting in all these instructions is justified since it's the initial configuration
+    //  it's referring to. The app should absolutely crash in case something goes wrong in such an early
+    //  stage.
     private func decodedXML<T: Decodable>(for resource: ConfigPlist) -> T {
         let keysPath = Bundle.main.path(forResource: resource.value, ofType: "plist")!
         let keysXML = FileManager.default.contents(atPath: keysPath)!

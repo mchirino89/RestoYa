@@ -9,6 +9,7 @@
 import CoreLocation
 
 struct Location2D {
+
     let retrievedPoint: CLLocation?
     let preloadedPoint: String
 
@@ -23,4 +24,5 @@ struct Location2D {
         let longitude = Double(stringLocation.last ?? "") ?? 0.0
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+
 }

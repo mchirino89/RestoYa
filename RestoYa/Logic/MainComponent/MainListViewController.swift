@@ -86,17 +86,23 @@ extension MainListViewController: ResponseHandable {
 }
 
 extension MainListViewController: MapHandable {
+
     //- Experimental feature to make map more dynamic. A proper cache policy should be implemented in
     // order to avoid so many hits to the server
     func didMovedMap(onto newLocation: CLLocation) {
         updateRestaurants(basedOn: newLocation)
+    }
+
+    func selectedRestaurant(_ restaurantName: String) {
+        let selectedRow = dataSource.indexFor(restaurantName)
+        let selectedIndex = IndexPath(item: selectedRow, section: 0)
+        listTableView.selectRow(at: selectedIndex, animated: true, scrollPosition: .top)
     }
 }
 
 extension MainListViewController: Locatable {
 
     func updated(with latest: CLLocation?) {
-        print("Location retrieved: \(String(describing: latest))")
         locationDelegate.stopUpdate()
         updateRestaurants(basedOn: latest)
         //- Additional handling should be added in production code for alternative paths. Right now
@@ -116,10 +122,22 @@ extension MainListViewController: Locatable {
 
 }
 
-//- TODO: selecting a restaurant from a cell should move the map's camare to its pin
 extension MainListViewController: UITableViewDelegate {
-    /// Focus map's camera on restaurants location
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+    private func deselectRow() {
+        guard let rowSelected = self.listTableView.indexPathForSelectedRow else { return }
+        self.listTableView.deselectRow(at: rowSelected, animated: true)
+    }
+
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        deselectRow()
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        deselectRow()
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        deselectRow()
     }
 }

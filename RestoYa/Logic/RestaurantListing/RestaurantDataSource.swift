@@ -8,8 +8,8 @@
 
 import ChiriUtils
 
-// Fun fact: the compailer complains if I put the UITableViewDataSource methods in a
-// extension (@objc related errors)
+//- Fun fact: the compailer complains if I put the UITableViewDataSource methods in a
+//  extension (@objc related errors)
 class RestaurantDataSource: NSObject, UITableViewDataSource {
 
     private let cellId: String
@@ -24,6 +24,10 @@ class RestaurantDataSource: NSObject, UITableViewDataSource {
         self.dataSource.removeAll()
         //- This should arrive sorted but I didn't find how to ask for it
         self.dataSource = dataSource.sorted(by: { $0.sortingDistance < $1.sortingDistance })
+    }
+
+    func indexFor(_ restaurantTitle: String) -> Int {
+        return dataSource.firstIndex(where: { $0.name == restaurantTitle }) ?? 0
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

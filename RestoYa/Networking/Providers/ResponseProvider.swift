@@ -34,7 +34,7 @@ class ResponseProvider {
     }
 
     func fetchRestaurants(on coordinates: CLLocation?) {
-        // Token doesn't exist or it has expired
+        //- Token doesn't exist or it has expired
         if RequestProvider.shared.token == nil {
             // In a production environment, token initial setup should happen on AppDelegate's
             // didFinishLaunchingWithOptions method and a queue system would be in place to keep proper

@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Too small of an entity to throw into its own file
+//- Too small of an entity to throw into its own file
 struct ServiceResponse: Decodable {
     let total: Int
     let max: Int

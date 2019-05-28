@@ -32,7 +32,7 @@ struct RestaurantViewModel {
             return "😍"
         case (4.5...5):
             return "🤤"
-        // Anything below 1 general score is not eatable
+        //- Anything below 1 general score is not eatable
         default:
             return "🤮"
         }

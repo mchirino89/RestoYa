@@ -9,6 +9,7 @@
 import MapKit
 
 class RestaurantPinViewModel: NSObject, MKAnnotation {
+    
     let title: String?
     let subtitle: String?
     let coordinate: CLLocationCoordinate2D
@@ -20,5 +21,4 @@ class RestaurantPinViewModel: NSObject, MKAnnotation {
                                      preloadedPoint: restaurantData.coordinates).geoPoint
     }
 
-//    private func buildCoordinates
 }

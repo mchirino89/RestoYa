@@ -10,6 +10,7 @@ import MapKit
 
 protocol MapHandable: class {
     func didMovedMap(onto newLocation: CLLocation)
+    func selectedRestaurant(_ restaurantName: String)
 }
 
 class MapHandler: NSObject {
@@ -32,20 +33,42 @@ class MapHandler: NSObject {
         pins.append(contentsOf: incomingPins)
     }
 
+    func annotation(for title: String) -> RestaurantPinViewModel {
+        return pins.first(where: { $0.title == title }) ?? pins.first!
+    }
+
 }
 
 extension MapHandler: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        print("MAP DEBUGGING - did change region animated \(mapView.centerCoordinate)")
         let newLocation = CLLocation(latitude: mapView.centerCoordinate.latitude,
                                      longitude: mapView.centerCoordinate.longitude)
         delegate?.didMovedMap(onto: newLocation)
     }
 
-    /// TODO: Places the focus for the tapped pin on its corresponding cell row
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("MAP DEBUGGING - did tapped on \(view)")
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is RestaurantPinViewModel else { return nil }
+
+        let identifier = "restaurantAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        } else {
+            annotationView?.annotation = annotation
+        }
+
+        return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        guard let tappedPin = view.annotation as? RestaurantPinViewModel else { return }
+        delegate?.selectedRestaurant(tappedPin.title ?? "")
     }
 
 }
