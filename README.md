@@ -6,9 +6,10 @@ You can find the requirements of this exercise in the [pdf](https://github.com/m
 
 Some frameworks were included in this project in order to speed up the process: 
 
-* [Cocoapods](https://cocoapods.org/)
+* [Cocoapods 1.7.0](https://cocoapods.org/)
 * [Alamofire](https://github.com/Alamofire/Alamofire)
 * [ChiriUtils](https://github.com/mchirino89/ChiriUtils)
+* [XCode 10.2.1](https://download.developer.apple.com/Developer_Tools/Xcode_10.2.1/Xcode_10.2.1.xip)
 
 Instalation process is straight forward: first install _Cocoapods_ using the terminal by executing:
 ```
