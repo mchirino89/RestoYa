@@ -11,7 +11,6 @@
 		71C854112299C93C00D2E0DB /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C854102299C93C00D2E0DB /* MainListViewController.swift */; };
 		71C854142299C93C00D2E0DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C854122299C93C00D2E0DB /* Main.storyboard */; };
 		71C854192299C93E00D2E0DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */; };
-		71C854242299C93E00D2E0DB /* RestoYaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C854232299C93E00D2E0DB /* RestoYaTests.swift */; };
 		71C854322299D17000D2E0DB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854312299D17000D2E0DB /* Keys.plist */; };
 		71C854362299E61700D2E0DB /* Request.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854352299E61700D2E0DB /* Request.plist */; };
 		71C85438229A1CA000D2E0DB /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */; };
@@ -54,8 +53,6 @@
 		71C854182299C93E00D2E0DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71C8541A2299C93E00D2E0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C8541F2299C93E00D2E0DB /* RestoYaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestoYaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71C854232299C93E00D2E0DB /* RestoYaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoYaTests.swift; sourceTree = "<group>"; };
-		71C854252299C93E00D2E0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C854312299D17000D2E0DB /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		71C854352299E61700D2E0DB /* Request.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Request.plist; sourceTree = "<group>"; };
 		71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
@@ -105,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				71C8540D2299C93C00D2E0DB /* RestoYa */,
-				71C854222299C93E00D2E0DB /* RestoYaTests */,
 				71C8540C2299C93C00D2E0DB /* Products */,
 				60D7A0328AB9DC3B3460EDB3 /* Pods */,
 				F34751E703583E464BD68B6A /* Frameworks */,
@@ -131,15 +127,6 @@
 				71C8542E2299CDB600D2E0DB /* UI */,
 			);
 			path = RestoYa;
-			sourceTree = "<group>";
-		};
-		71C854222299C93E00D2E0DB /* RestoYaTests */ = {
-			isa = PBXGroup;
-			children = (
-				71C854232299C93E00D2E0DB /* RestoYaTests.swift */,
-				71C854252299C93E00D2E0DB /* Info.plist */,
-			);
-			path = RestoYaTests;
 			sourceTree = "<group>";
 		};
 		71C8542E2299CDB600D2E0DB /* UI */ = {
@@ -441,7 +428,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C854242299C93E00D2E0DB /* RestoYaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
