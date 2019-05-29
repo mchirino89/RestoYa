@@ -3,257 +3,236 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71C8540F2299C93C00D2E0DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8540E2299C93C00D2E0DB /* AppDelegate.swift */; };
-		71C854112299C93C00D2E0DB /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C854102299C93C00D2E0DB /* MainListViewController.swift */; };
-		71C854142299C93C00D2E0DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C854122299C93C00D2E0DB /* Main.storyboard */; };
-		71C854192299C93E00D2E0DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */; };
-		71C854322299D17000D2E0DB /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854312299D17000D2E0DB /* Keys.plist */; };
-		71C854362299E61700D2E0DB /* Request.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C854352299E61700D2E0DB /* Request.plist */; };
-		71C85438229A1CA000D2E0DB /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */; };
-		71C8543A229A1E9600D2E0DB /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85439229A1E9600D2E0DB /* MapHandler.swift */; };
-		71C8543C229A1EF500D2E0DB /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */; };
-		71C8543F229A21E300D2E0DB /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8543E229A21E300D2E0DB /* Restaurant.swift */; };
-		71C85446229A249500D2E0DB /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85445229A249500D2E0DB /* RequestProvider.swift */; };
-		71C85449229A252800D2E0DB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85448229A252800D2E0DB /* Config.swift */; };
-		71C85452229B12C400D2E0DB /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85451229B12C400D2E0DB /* EndPoints.swift */; };
-		71C85454229B1B3D00D2E0DB /* ResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */; };
-		71C85459229BECB900D2E0DB /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85458229BECB900D2E0DB /* Parameters.swift */; };
-		71C8545B229BED2300D2E0DB /* Location2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C8545A229BED2300D2E0DB /* Location2D.swift */; };
-		71C85461229C00CA00D2E0DB /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85460229C00CA00D2E0DB /* RestaurantViewCell.swift */; };
-		71C85463229C4A7800D2E0DB /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C85462229C4A7800D2E0DB /* RestaurantViewModel.swift */; };
-		71C85464229C8E7100D2E0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C854152299C93E00D2E0DB /* Assets.xcassets */; };
-		71FFD500229CC87C00D5BF96 /* RestaurantPinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFD4FF229CC87C00D5BF96 /* RestaurantPinViewModel.swift */; };
-		E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */; };
+		705F0475EF80A1E3C4D3F11D /* Pods_RestoYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35512CCBD77277DEEC6426F /* Pods_RestoYa.framework */; };
+		7110FB34229E1CB800DF2D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7110FB12229E1CB800DF2D5E /* Assets.xcassets */; };
+		7110FB36229E1CB800DF2D5E /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB16229E1CB800DF2D5E /* RestaurantViewModel.swift */; };
+		7110FB37229E1CB800DF2D5E /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB17229E1CB800DF2D5E /* RestaurantViewCell.swift */; };
+		7110FB38229E1CB800DF2D5E /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB1A229E1CB800DF2D5E /* Parameters.swift */; };
+		7110FB39229E1CB800DF2D5E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB1B229E1CB800DF2D5E /* Config.swift */; };
+		7110FB3A229E1CB800DF2D5E /* ResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB1D229E1CB800DF2D5E /* ResponseProvider.swift */; };
+		7110FB3B229E1CB800DF2D5E /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB1E229E1CB800DF2D5E /* RequestProvider.swift */; };
+		7110FB3C229E1CB800DF2D5E /* Request.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7110FB20229E1CB800DF2D5E /* Request.plist */; };
+		7110FB3D229E1CB800DF2D5E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB21229E1CB800DF2D5E /* EndPoints.swift */; };
+		7110FB3E229E1CB800DF2D5E /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7110FB22229E1CB800DF2D5E /* Keys.plist */; };
+		7110FB3F229E1CB800DF2D5E /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB25229E1CB800DF2D5E /* MainListViewController.swift */; };
+		7110FB40229E1CB800DF2D5E /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB27229E1CB800DF2D5E /* RestaurantDataSource.swift */; };
+		7110FB41229E1CB800DF2D5E /* RestaurantPinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB29229E1CB800DF2D5E /* RestaurantPinViewModel.swift */; };
+		7110FB42229E1CB800DF2D5E /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB2A229E1CB800DF2D5E /* LocationDelegate.swift */; };
+		7110FB43229E1CB800DF2D5E /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB2B229E1CB800DF2D5E /* MapHandler.swift */; };
+		7110FB44229E1CB800DF2D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB2D229E1CB800DF2D5E /* AppDelegate.swift */; };
+		7110FB46229E1CB800DF2D5E /* Location2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB30229E1CB800DF2D5E /* Location2D.swift */; };
+		7110FB47229E1CB800DF2D5E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110FB31229E1CB800DF2D5E /* Restaurant.swift */; };
+		7110FB4E229E1E2800DF2D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7110FB0E229E1CB800DF2D5E /* LaunchScreen.storyboard */; };
+		7110FB4F229E1E2E00DF2D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7110FB10229E1CB800DF2D5E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		71C854202299C93E00D2E0DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71C854032299C93C00D2E0DB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71C8540A2299C93C00D2E0DB;
-			remoteInfo = RestoYa;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		043A97AF8339BD78C0D68971 /* Pods-RestoYa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoYa.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa.release.xcconfig"; sourceTree = "<group>"; };
-		1EDA259B3AA14BADE2002A60 /* Pods-RestoYa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoYa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa.debug.xcconfig"; sourceTree = "<group>"; };
-		25248F0CB7590FE4F8BC2CDF /* Pods_RestoYaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoYaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoYa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71C8540B2299C93C00D2E0DB /* RestoYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestoYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71C8540E2299C93C00D2E0DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71C854102299C93C00D2E0DB /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
-		71C854132299C93C00D2E0DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71C854152299C93E00D2E0DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		71C854182299C93E00D2E0DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		71C8541A2299C93E00D2E0DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71C8541F2299C93E00D2E0DB /* RestoYaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestoYaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71C854312299D17000D2E0DB /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		71C854352299E61700D2E0DB /* Request.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Request.plist; sourceTree = "<group>"; };
-		71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
-		71C85439229A1E9600D2E0DB /* MapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
-		71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
-		71C8543E229A21E300D2E0DB /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		71C85445229A249500D2E0DB /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
-		71C85448229A252800D2E0DB /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		71C85451229B12C400D2E0DB /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProvider.swift; sourceTree = "<group>"; };
-		71C85458229BECB900D2E0DB /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
-		71C8545A229BED2300D2E0DB /* Location2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location2D.swift; sourceTree = "<group>"; };
-		71C85460229C00CA00D2E0DB /* RestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
-		71C85462229C4A7800D2E0DB /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
-		71FFD4FF229CC87C00D5BF96 /* RestaurantPinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantPinViewModel.swift; sourceTree = "<group>"; };
+		0C8F37C7C60E64AB01720458 /* Pods-RestoYa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoYa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa.debug.xcconfig"; sourceTree = "<group>"; };
+		597BDF45A03E82BD4D9D83B2 /* Pods-RestoYa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoYa.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa.release.xcconfig"; sourceTree = "<group>"; };
+		7110FAF6229E1BCB00DF2D5E /* RestoYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestoYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7110FB0F229E1CB800DF2D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7110FB11229E1CB800DF2D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7110FB12229E1CB800DF2D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7110FB16229E1CB800DF2D5E /* RestaurantViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		7110FB17229E1CB800DF2D5E /* RestaurantViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
+		7110FB1A229E1CB800DF2D5E /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		7110FB1B229E1CB800DF2D5E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7110FB1D229E1CB800DF2D5E /* ResponseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProvider.swift; sourceTree = "<group>"; };
+		7110FB1E229E1CB800DF2D5E /* RequestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		7110FB20229E1CB800DF2D5E /* Request.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Request.plist; sourceTree = "<group>"; };
+		7110FB21229E1CB800DF2D5E /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		7110FB22229E1CB800DF2D5E /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		7110FB25229E1CB800DF2D5E /* MainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
+		7110FB27229E1CB800DF2D5E /* RestaurantDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
+		7110FB29229E1CB800DF2D5E /* RestaurantPinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantPinViewModel.swift; sourceTree = "<group>"; };
+		7110FB2A229E1CB800DF2D5E /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		7110FB2B229E1CB800DF2D5E /* MapHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
+		7110FB2D229E1CB800DF2D5E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7110FB2E229E1CB800DF2D5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7110FB30229E1CB800DF2D5E /* Location2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location2D.swift; sourceTree = "<group>"; };
+		7110FB31229E1CB800DF2D5E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		C35512CCBD77277DEEC6426F /* Pods_RestoYa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoYa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71C854082299C93C00D2E0DB /* Frameworks */ = {
+		7110FAF3229E1BCB00DF2D5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2174A39AF3BBC3B88663E38 /* Pods_RestoYa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71C8541C2299C93E00D2E0DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				705F0475EF80A1E3C4D3F11D /* Pods_RestoYa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		60D7A0328AB9DC3B3460EDB3 /* Pods */ = {
+		66C56024AF265A1CC78859B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1EDA259B3AA14BADE2002A60 /* Pods-RestoYa.debug.xcconfig */,
-				043A97AF8339BD78C0D68971 /* Pods-RestoYa.release.xcconfig */,
+				0C8F37C7C60E64AB01720458 /* Pods-RestoYa.debug.xcconfig */,
+				597BDF45A03E82BD4D9D83B2 /* Pods-RestoYa.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		71C854022299C93C00D2E0DB = {
+		7110FAED229E1BCB00DF2D5E = {
 			isa = PBXGroup;
 			children = (
-				71C8540D2299C93C00D2E0DB /* RestoYa */,
-				71C8540C2299C93C00D2E0DB /* Products */,
-				60D7A0328AB9DC3B3460EDB3 /* Pods */,
-				F34751E703583E464BD68B6A /* Frameworks */,
+				7110FB0B229E1CB800DF2D5E /* RestoYa */,
+				7110FAF7229E1BCB00DF2D5E /* Products */,
+				66C56024AF265A1CC78859B4 /* Pods */,
+				86F35894DDE401F043AF644A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		71C8540C2299C93C00D2E0DB /* Products */ = {
+		7110FAF7229E1BCB00DF2D5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71C8540B2299C93C00D2E0DB /* RestoYa.app */,
-				71C8541F2299C93E00D2E0DB /* RestoYaTests.xctest */,
+				7110FAF6229E1BCB00DF2D5E /* RestoYa.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71C8540D2299C93C00D2E0DB /* RestoYa */ = {
+		7110FB0B229E1CB800DF2D5E /* RestoYa */ = {
 			isa = PBXGroup;
 			children = (
-				71C8543D229A21D400D2E0DB /* Domain */,
-				71C854332299E35800D2E0DB /* Networking */,
-				71C854302299CDD400D2E0DB /* Logic */,
-				71C8542F2299CDC900D2E0DB /* Support */,
-				71C8542E2299CDB600D2E0DB /* UI */,
+				7110FB2F229E1CB800DF2D5E /* Domain */,
+				7110FB23229E1CB800DF2D5E /* Logic */,
+				7110FB18229E1CB800DF2D5E /* Networking */,
+				7110FB2C229E1CB800DF2D5E /* Support */,
+				7110FB0C229E1CB800DF2D5E /* UI */,
 			);
 			path = RestoYa;
 			sourceTree = "<group>";
 		};
-		71C8542E2299CDB600D2E0DB /* UI */ = {
+		7110FB0C229E1CB800DF2D5E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				71C854152299C93E00D2E0DB /* Assets.xcassets */,
-				71C8545E229C008000D2E0DB /* Storyboards */,
-				71C8545F229C009100D2E0DB /* Views */,
+				7110FB0D229E1CB800DF2D5E /* Storyboards */,
+				7110FB12229E1CB800DF2D5E /* Assets.xcassets */,
+				7110FB15229E1CB800DF2D5E /* Views */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		71C8542F2299CDC900D2E0DB /* Support */ = {
+		7110FB0D229E1CB800DF2D5E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				71C8540E2299C93C00D2E0DB /* AppDelegate.swift */,
-				71C8541A2299C93E00D2E0DB /* Info.plist */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		71C854302299CDD400D2E0DB /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				71C85441229A242900D2E0DB /* MainComponent */,
-				71C85442229A243400D2E0DB /* RestaurantListing */,
-				71C85443229A244500D2E0DB /* MapFeature */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		71C854332299E35800D2E0DB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				71C854342299E5D100D2E0DB /* API */,
-				71C85447229A251000D2E0DB /* Config */,
-				71C85455229B1B4A00D2E0DB /* Providers */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		71C854342299E5D100D2E0DB /* API */ = {
-			isa = PBXGroup;
-			children = (
-				71C85451229B12C400D2E0DB /* EndPoints.swift */,
-				71C854312299D17000D2E0DB /* Keys.plist */,
-				71C854352299E61700D2E0DB /* Request.plist */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		71C8543D229A21D400D2E0DB /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				71C8543E229A21E300D2E0DB /* Restaurant.swift */,
-				71C8545A229BED2300D2E0DB /* Location2D.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		71C85441229A242900D2E0DB /* MainComponent */ = {
-			isa = PBXGroup;
-			children = (
-				71C854102299C93C00D2E0DB /* MainListViewController.swift */,
-			);
-			path = MainComponent;
-			sourceTree = "<group>";
-		};
-		71C85442229A243400D2E0DB /* RestaurantListing */ = {
-			isa = PBXGroup;
-			children = (
-				71C85437229A1CA000D2E0DB /* RestaurantDataSource.swift */,
-			);
-			path = RestaurantListing;
-			sourceTree = "<group>";
-		};
-		71C85443229A244500D2E0DB /* MapFeature */ = {
-			isa = PBXGroup;
-			children = (
-				71C8543B229A1EF500D2E0DB /* LocationDelegate.swift */,
-				71C85439229A1E9600D2E0DB /* MapHandler.swift */,
-				71FFD4FF229CC87C00D5BF96 /* RestaurantPinViewModel.swift */,
-			);
-			path = MapFeature;
-			sourceTree = "<group>";
-		};
-		71C85447229A251000D2E0DB /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				71C85448229A252800D2E0DB /* Config.swift */,
-				71C85458229BECB900D2E0DB /* Parameters.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		71C85455229B1B4A00D2E0DB /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				71C85445229A249500D2E0DB /* RequestProvider.swift */,
-				71C85453229B1B3D00D2E0DB /* ResponseProvider.swift */,
-			);
-			path = Providers;
-			sourceTree = "<group>";
-		};
-		71C8545E229C008000D2E0DB /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */,
-				71C854122299C93C00D2E0DB /* Main.storyboard */,
+				7110FB0E229E1CB800DF2D5E /* LaunchScreen.storyboard */,
+				7110FB10229E1CB800DF2D5E /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		71C8545F229C009100D2E0DB /* Views */ = {
+		7110FB15229E1CB800DF2D5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				71C85460229C00CA00D2E0DB /* RestaurantViewCell.swift */,
-				71C85462229C4A7800D2E0DB /* RestaurantViewModel.swift */,
+				7110FB16229E1CB800DF2D5E /* RestaurantViewModel.swift */,
+				7110FB17229E1CB800DF2D5E /* RestaurantViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F34751E703583E464BD68B6A /* Frameworks */ = {
+		7110FB18229E1CB800DF2D5E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2B57CEF769F32E94B8473145 /* Pods_RestoYa.framework */,
-				25248F0CB7590FE4F8BC2CDF /* Pods_RestoYaTests.framework */,
+				7110FB19229E1CB800DF2D5E /* Config */,
+				7110FB1C229E1CB800DF2D5E /* Providers */,
+				7110FB1F229E1CB800DF2D5E /* API */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7110FB19229E1CB800DF2D5E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB1A229E1CB800DF2D5E /* Parameters.swift */,
+				7110FB1B229E1CB800DF2D5E /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7110FB1C229E1CB800DF2D5E /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB1D229E1CB800DF2D5E /* ResponseProvider.swift */,
+				7110FB1E229E1CB800DF2D5E /* RequestProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		7110FB1F229E1CB800DF2D5E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB21229E1CB800DF2D5E /* EndPoints.swift */,
+				7110FB22229E1CB800DF2D5E /* Keys.plist */,
+				7110FB20229E1CB800DF2D5E /* Request.plist */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7110FB23229E1CB800DF2D5E /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB24229E1CB800DF2D5E /* MainComponent */,
+				7110FB26229E1CB800DF2D5E /* RestaurantListing */,
+				7110FB28229E1CB800DF2D5E /* MapFeature */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		7110FB24229E1CB800DF2D5E /* MainComponent */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB25229E1CB800DF2D5E /* MainListViewController.swift */,
+			);
+			path = MainComponent;
+			sourceTree = "<group>";
+		};
+		7110FB26229E1CB800DF2D5E /* RestaurantListing */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB27229E1CB800DF2D5E /* RestaurantDataSource.swift */,
+			);
+			path = RestaurantListing;
+			sourceTree = "<group>";
+		};
+		7110FB28229E1CB800DF2D5E /* MapFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB29229E1CB800DF2D5E /* RestaurantPinViewModel.swift */,
+				7110FB2A229E1CB800DF2D5E /* LocationDelegate.swift */,
+				7110FB2B229E1CB800DF2D5E /* MapHandler.swift */,
+			);
+			path = MapFeature;
+			sourceTree = "<group>";
+		};
+		7110FB2C229E1CB800DF2D5E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB2D229E1CB800DF2D5E /* AppDelegate.swift */,
+				7110FB2E229E1CB800DF2D5E /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		7110FB2F229E1CB800DF2D5E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7110FB30229E1CB800DF2D5E /* Location2D.swift */,
+				7110FB31229E1CB800DF2D5E /* Restaurant.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		86F35894DDE401F043AF644A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C35512CCBD77277DEEC6426F /* Pods_RestoYa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,15 +240,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71C8540A2299C93C00D2E0DB /* RestoYa */ = {
+		7110FAF5229E1BCB00DF2D5E /* RestoYa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71C854282299C93E00D2E0DB /* Build configuration list for PBXNativeTarget "RestoYa" */;
+			buildConfigurationList = 7110FB08229E1BCD00DF2D5E /* Build configuration list for PBXNativeTarget "RestoYa" */;
 			buildPhases = (
-				D0E17E12EEA36869667F717F /* [CP] Check Pods Manifest.lock */,
-				71C854072299C93C00D2E0DB /* Sources */,
-				71C854082299C93C00D2E0DB /* Frameworks */,
-				71C854092299C93C00D2E0DB /* Resources */,
-				2938E445DEA8DF8AB965AB6B /* [CP] Embed Pods Frameworks */,
+				FCEB8C8BE7483055EE1D894D /* [CP] Check Pods Manifest.lock */,
+				7110FAF2229E1BCB00DF2D5E /* Sources */,
+				7110FAF3229E1BCB00DF2D5E /* Frameworks */,
+				7110FAF4229E1BCB00DF2D5E /* Resources */,
+				6CE2ECF7F30FD647C7884A26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,52 +256,25 @@
 			);
 			name = RestoYa;
 			productName = RestoYa;
-			productReference = 71C8540B2299C93C00D2E0DB /* RestoYa.app */;
+			productReference = 7110FAF6229E1BCB00DF2D5E /* RestoYa.app */;
 			productType = "com.apple.product-type.application";
-		};
-		71C8541E2299C93E00D2E0DB /* RestoYaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71C8542B2299C93E00D2E0DB /* Build configuration list for PBXNativeTarget "RestoYaTests" */;
-			buildPhases = (
-				71C8541B2299C93E00D2E0DB /* Sources */,
-				71C8541C2299C93E00D2E0DB /* Frameworks */,
-				71C8541D2299C93E00D2E0DB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				71C854212299C93E00D2E0DB /* PBXTargetDependency */,
-			);
-			name = RestoYaTests;
-			productName = RestoYaTests;
-			productReference = 71C8541F2299C93E00D2E0DB /* RestoYaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		71C854032299C93C00D2E0DB /* Project object */ = {
+		7110FAEE229E1BCB00DF2D5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Mauricio Chirino";
 				TargetAttributes = {
-					71C8540A2299C93C00D2E0DB = {
-						CreatedOnToolsVersion = 10.2.1;
-						SystemCapabilities = {
-							com.apple.Maps.iOS = {
-								enabled = 0;
-							};
-						};
-					};
-					71C8541E2299C93E00D2E0DB = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 71C8540A2299C93C00D2E0DB;
+					7110FAF5229E1BCB00DF2D5E = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 71C854062299C93C00D2E0DB /* Build configuration list for PBXProject "RestoYa" */;
+			buildConfigurationList = 7110FAF1229E1BCB00DF2D5E /* Build configuration list for PBXProject "RestoYa" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -330,58 +282,53 @@
 				en,
 				Base,
 			);
-			mainGroup = 71C854022299C93C00D2E0DB;
-			productRefGroup = 71C8540C2299C93C00D2E0DB /* Products */;
+			mainGroup = 7110FAED229E1BCB00DF2D5E;
+			productRefGroup = 7110FAF7229E1BCB00DF2D5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71C8540A2299C93C00D2E0DB /* RestoYa */,
-				71C8541E2299C93E00D2E0DB /* RestoYaTests */,
+				7110FAF5229E1BCB00DF2D5E /* RestoYa */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		71C854092299C93C00D2E0DB /* Resources */ = {
+		7110FAF4229E1BCB00DF2D5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C854192299C93E00D2E0DB /* LaunchScreen.storyboard in Resources */,
-				71C854322299D17000D2E0DB /* Keys.plist in Resources */,
-				71C854362299E61700D2E0DB /* Request.plist in Resources */,
-				71C854142299C93C00D2E0DB /* Main.storyboard in Resources */,
-				71C85464229C8E7100D2E0DB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71C8541D2299C93E00D2E0DB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7110FB4F229E1E2E00DF2D5E /* Main.storyboard in Resources */,
+				7110FB4E229E1E2800DF2D5E /* LaunchScreen.storyboard in Resources */,
+				7110FB34229E1CB800DF2D5E /* Assets.xcassets in Resources */,
+				7110FB3E229E1CB800DF2D5E /* Keys.plist in Resources */,
+				7110FB3C229E1CB800DF2D5E /* Request.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2938E445DEA8DF8AB965AB6B /* [CP] Embed Pods Frameworks */ = {
+		6CE2ECF7F30FD647C7884A26 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChiriUtils/ChiriUtils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChiriUtils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RestoYa/Pods-RestoYa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0E17E12EEA36869667F717F /* [CP] Check Pods Manifest.lock */ = {
+		FCEB8C8BE7483055EE1D894D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,66 +349,51 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		71C854072299C93C00D2E0DB /* Sources */ = {
+		7110FAF2229E1BCB00DF2D5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C85446229A249500D2E0DB /* RequestProvider.swift in Sources */,
-				71C85452229B12C400D2E0DB /* EndPoints.swift in Sources */,
-				71C85438229A1CA000D2E0DB /* RestaurantDataSource.swift in Sources */,
-				71FFD500229CC87C00D5BF96 /* RestaurantPinViewModel.swift in Sources */,
-				71C85461229C00CA00D2E0DB /* RestaurantViewCell.swift in Sources */,
-				71C854112299C93C00D2E0DB /* MainListViewController.swift in Sources */,
-				71C85454229B1B3D00D2E0DB /* ResponseProvider.swift in Sources */,
-				71C8543F229A21E300D2E0DB /* Restaurant.swift in Sources */,
-				71C8540F2299C93C00D2E0DB /* AppDelegate.swift in Sources */,
-				71C85449229A252800D2E0DB /* Config.swift in Sources */,
-				71C8543A229A1E9600D2E0DB /* MapHandler.swift in Sources */,
-				71C8545B229BED2300D2E0DB /* Location2D.swift in Sources */,
-				71C8543C229A1EF500D2E0DB /* LocationDelegate.swift in Sources */,
-				71C85459229BECB900D2E0DB /* Parameters.swift in Sources */,
-				71C85463229C4A7800D2E0DB /* RestaurantViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71C8541B2299C93E00D2E0DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7110FB3B229E1CB800DF2D5E /* RequestProvider.swift in Sources */,
+				7110FB3A229E1CB800DF2D5E /* ResponseProvider.swift in Sources */,
+				7110FB36229E1CB800DF2D5E /* RestaurantViewModel.swift in Sources */,
+				7110FB41229E1CB800DF2D5E /* RestaurantPinViewModel.swift in Sources */,
+				7110FB3D229E1CB800DF2D5E /* EndPoints.swift in Sources */,
+				7110FB47229E1CB800DF2D5E /* Restaurant.swift in Sources */,
+				7110FB39229E1CB800DF2D5E /* Config.swift in Sources */,
+				7110FB37229E1CB800DF2D5E /* RestaurantViewCell.swift in Sources */,
+				7110FB43229E1CB800DF2D5E /* MapHandler.swift in Sources */,
+				7110FB44229E1CB800DF2D5E /* AppDelegate.swift in Sources */,
+				7110FB40229E1CB800DF2D5E /* RestaurantDataSource.swift in Sources */,
+				7110FB38229E1CB800DF2D5E /* Parameters.swift in Sources */,
+				7110FB42229E1CB800DF2D5E /* LocationDelegate.swift in Sources */,
+				7110FB46229E1CB800DF2D5E /* Location2D.swift in Sources */,
+				7110FB3F229E1CB800DF2D5E /* MainListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		71C854212299C93E00D2E0DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71C8540A2299C93C00D2E0DB /* RestoYa */;
-			targetProxy = 71C854202299C93E00D2E0DB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		71C854122299C93C00D2E0DB /* Main.storyboard */ = {
+		7110FB0E229E1CB800DF2D5E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				71C854132299C93C00D2E0DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		71C854172299C93E00D2E0DB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71C854182299C93E00D2E0DB /* Base */,
+				7110FB0F229E1CB800DF2D5E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7110FB10229E1CB800DF2D5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7110FB11229E1CB800DF2D5E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		71C854262299C93E00D2E0DB /* Debug */ = {
+		7110FB06229E1BCD00DF2D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -512,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -522,7 +454,7 @@
 			};
 			name = Debug;
 		};
-		71C854272299C93E00D2E0DB /* Release */ = {
+		7110FB07229E1BCD00DF2D5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -567,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -577,13 +509,12 @@
 			};
 			name = Release;
 		};
-		71C854292299C93E00D2E0DB /* Debug */ = {
+		7110FB09229E1BCD00DF2D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EDA259B3AA14BADE2002A60 /* Pods-RestoYa.debug.xcconfig */;
+			baseConfigurationReference = 0C8F37C7C60E64AB01720458 /* Pods-RestoYa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7CXK2PKWD;
 				INFOPLIST_FILE = RestoYa/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,18 +522,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-codegeeks.RestoYa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		71C8542A2299C93E00D2E0DB /* Release */ = {
+		7110FB0A229E1BCD00DF2D5E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 043A97AF8339BD78C0D68971 /* Pods-RestoYa.release.xcconfig */;
+			baseConfigurationReference = 597BDF45A03E82BD4D9D83B2 /* Pods-RestoYa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7CXK2PKWD;
 				INFOPLIST_FILE = RestoYa/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,84 +540,33 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-codegeeks.RestoYa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		71C8542C2299C93E00D2E0DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7CXK2PKWD;
-				INFOPLIST_FILE = RestoYaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-codegeeks.RestoYaTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestoYa.app/RestoYa";
-			};
-			name = Debug;
-		};
-		71C8542D2299C93E00D2E0DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7CXK2PKWD;
-				INFOPLIST_FILE = RestoYaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-codegeeks.RestoYaTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestoYa.app/RestoYa";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71C854062299C93C00D2E0DB /* Build configuration list for PBXProject "RestoYa" */ = {
+		7110FAF1229E1BCB00DF2D5E /* Build configuration list for PBXProject "RestoYa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71C854262299C93E00D2E0DB /* Debug */,
-				71C854272299C93E00D2E0DB /* Release */,
+				7110FB06229E1BCD00DF2D5E /* Debug */,
+				7110FB07229E1BCD00DF2D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71C854282299C93E00D2E0DB /* Build configuration list for PBXNativeTarget "RestoYa" */ = {
+		7110FB08229E1BCD00DF2D5E /* Build configuration list for PBXNativeTarget "RestoYa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71C854292299C93E00D2E0DB /* Debug */,
-				71C8542A2299C93E00D2E0DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		71C8542B2299C93E00D2E0DB /* Build configuration list for PBXNativeTarget "RestoYaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				71C8542C2299C93E00D2E0DB /* Debug */,
-				71C8542D2299C93E00D2E0DB /* Release */,
+				7110FB09229E1BCD00DF2D5E /* Debug */,
+				7110FB0A229E1BCD00DF2D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 71C854032299C93C00D2E0DB /* Project object */;
+	rootObject = 7110FAEE229E1BCB00DF2D5E /* Project object */;
 }

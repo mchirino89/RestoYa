@@ -42,7 +42,7 @@ class RequestProvider {
 
     func getData(basedOn responseConfig: ResponseConfig, with completion: @escaping (Result<Data>) -> ()) {
         let originURL = config.baseKeys.baseURL + responseConfig.endpoint.value
-        let mergedParameters = responseConfig.parameters.merging(config.baseParameters) { (_, _) in }
+        let mergedParameters = responseConfig.parameters.merging(config.baseParameters) { (_, _) in return true }
         Alamofire
             .request(originURL, parameters: mergedParameters, headers: responseConfig.headers)
             .validate()
