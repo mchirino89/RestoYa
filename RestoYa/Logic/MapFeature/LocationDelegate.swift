@@ -48,6 +48,7 @@ extension LocationDelegate: CLLocationManagerDelegate {
             stopUpdate()
         case .authorizedWhenInUse, .authorizedAlways:
             print("We're good to go")
+			delegate?.updated(with: nil)
         default:
             print("The user hasn't made up his mind yet")
         }
